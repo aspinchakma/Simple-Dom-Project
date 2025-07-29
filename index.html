@@ -14,64 +14,72 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <!-- Navigation Section -->
-    <section class="bg-[#F9F7F3] lg:pt-6 lg:pb-8 py-2">
-      <nav class="lg:w-[80%] mx-auto">
-        <!-- Nav Section -->
-        <div class="navbar flex justify-between">
-          <div class="navbar-start w-fit">
-            <div class="dropdown">
-              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+    <header>
+      <!-- Navigation Section -->
+      <section class="bg-[#F9F7F3] lg:pt-6 lg:pb-8 py-2">
+        <nav class="lg:w-[80%] mx-auto">
+          <!-- Nav Section -->
+          <div class="navbar flex justify-between">
+            <div class="navbar-start w-fit">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
+                  <a
+                    href=""
+                    class="bg-[#B4F461] text-lg font-bold px-8 py-3 rounded-md"
+                    >Blog</a
+                  >
+                </ul>
               </div>
-              <ul
-                tabindex="0"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              <a
+                href=""
+                class="bg-[#B4F461] text-xl font-bold px-8 py-3 rounded-md hidden lg:block"
+                >Blog</a
               >
-                <a
-                  href=""
-                  class="bg-[#B4F461] text-lg font-bold px-8 py-3 rounded-md"
-                  >Blog</a
-                >
-              </ul>
             </div>
-            <a
-              href=""
-              class="bg-[#B4F461] text-xl font-bold px-8 py-3 rounded-md hidden lg:block"
-              >Blog</a
-            >
+            <div class="navbar-center lg:flex">
+              <img
+                class="w-[28px] hidden lg:block"
+                src="assets/logo.png"
+                alt=""
+              />
+              <h1 class="text-[20px] font-bold ml-2 lg:block">
+                Donate Bangladesh
+              </h1>
+            </div>
+            <div class="navbar-end w-fit">
+              <img width="20px" src="assets/coin.png" alt="" />
+              <h3 class="text-xl font-bold ml-1 text-[#565654]">
+                <span class="mr-1">5500</span>BDT
+              </h3>
+            </div>
           </div>
-          <div class="navbar-center lg:flex">
-            <img
-              class="w-[28px] hidden lg:block"
-              src="assets/logo.png"
-              alt=""
-            />
-            <h1 class="text-[20px] font-bold ml-2 lg:block">
-              Donate Bangladesh
-            </h1>
-          </div>
-          <div class="navbar-end w-fit">
-            <img width="20px" src="assets/coin.png" alt="" />
-            <h3 class="text-xl font-bold ml-1 text-[#565654]">
-              <span class="mr-1">5500</span>BDT
-            </h3>
-          </div>
-        </div>
-      </nav>
-    </section>
+        </nav>
+      </section>
+
+      <!-- Donation And History Button -->
+      <div class="text-center mt-8 lg:mt-16 bg-transparent">
+        <button class="btn bg-[#B4F461] px-8 py-3 font-bold">Donation</button>
+        <button class="btn px-8 py-3 font-bold">History</button>
+      </div>
+    </header>
   </body>
 </html>
