@@ -41,12 +41,18 @@ document
     if (donatedBalanceNoakhali >= 0 && !isNaN(donatedBalanceNoakhali)) {
       const totalBalance = mainBalance + donatedBalanceNoakhali;
       document.getElementById("main_balance").innerText = totalBalance;
+      document.getElementById("noakhali_payment_successfull").innerText =
+        donatedBalanceNoakhali;
       document.getElementById("Total_amount_noakhali").innerText =
         TotalBalanceNoakhali + donatedBalanceNoakhali;
+
       transactionHistory(
         donatedBalanceNoakhali,
         "Flood at Noakhali, Bangladesh"
       );
+
+      // Modal Opening
+      document.getElementById("my_modal_1").showModal();
 
       // clear input Field
       clearValue("donated_input_noakhali");

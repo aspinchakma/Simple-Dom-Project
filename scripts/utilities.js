@@ -45,6 +45,7 @@ export function transactionHistory(amount, title) {
   const div = document.createElement("div");
   div.classList.add("p-2");
   div.classList.add("lg:p-8");
+  div.classList.add("rounded-xl");
   div.classList.add("mb-2");
   div.classList.add("border-2");
   div.classList.add("border-gray-400");
