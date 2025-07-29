@@ -85,6 +85,7 @@
           Donation
         </button>
         <button
+          id="history_button"
           class="px-8 py-3 font-bold rounded-lg border-2 border-[#b1b1b1]"
         >
           History
@@ -93,7 +94,7 @@
     </header>
     <main class="lg:w-[80%] mx-auto w-[95%]">
       <!-- Donation Section -->
-      <section>
+      <section id="donation_section">
         <!-- Noakhali Section -->
         <div
           class="grid lg:grid-cols-2 gap-10 border-2 border-gray-200 rounded-lg lg:p-8 p-3"
@@ -285,7 +286,9 @@
         </div>
       </section>
       <!-- History Section -->
-      <h3 class="text-4xl font-bold text-center">This is History Section</h3>
+      <section id="history_section" class="hidden">
+        <h3 class="text-4xl font-bold text-center">This is History Section</h3>
+      </section>
     </main>
 
     <!-- JavaScript -->
