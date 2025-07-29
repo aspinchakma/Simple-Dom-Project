@@ -6,6 +6,16 @@ import {
   hiddenFunc,
   transactionHistory,
 } from "./utilities.js";
+
+// Blog Button
+const blogs = document.getElementsByClassName("blog_button");
+for (let blog of blogs) {
+  blog.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "../blog.html";
+  });
+}
+
 // Donation Button
 document.getElementById("donation_button").addEventListener("click", () => {
   // donation section visibale
@@ -57,6 +67,8 @@ document
       // clear input Field
       clearValue("donated_input_noakhali");
     } else {
+      // clear input Field
+      clearValue("donated_input_noakhali");
       alert(`We're Sorry!
 Your donation could not be processed.`);
     }
