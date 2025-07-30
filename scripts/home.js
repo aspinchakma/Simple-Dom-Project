@@ -157,3 +157,11 @@ Your donation could not be processed.`);
     // Clear input field in feni section
     clearValue("quota_movement_input");
   });
+
+// Transaction History container
+const parentContainer = document.getElementById("history_section");
+parentContainer.addEventListener("click", (e) => {
+  // Removing Div Container
+  const divContainer = e.target.closest("div");
+  parentContainer.removeChild(divContainer);
+});

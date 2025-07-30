@@ -49,6 +49,7 @@ export function transactionHistory(amount, title) {
   div.classList.add("mb-2");
   div.classList.add("border-2");
   div.classList.add("border-gray-400");
+  div.classList.add("bg-[#d0e7ff]");
   const date = new Date();
   const formattedDate = `Date :${date.toString()}`;
   div.innerHTML = `
