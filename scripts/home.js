@@ -118,3 +118,42 @@ Your donation could not be processed.`);
     // Clear input field in feni section
     clearValue("donated_blance_input");
   });
+
+// quota movement section
+
+document
+  .getElementById("quote_movement_donate_now_button")
+  .addEventListener("click", function () {
+    // get main balance, section blance, input value
+    const mainBalance = getInnerText("main_balance");
+    const donatedBalanceQuota = getInputValue("quota_movement_input");
+    const TotalBalanceQuota = getInnerText("quota_section_total_balance");
+
+    // checking invalid input for quota movement input field
+    if (donatedBalanceQuota > 0 && !isNaN(donatedBalanceQuota)) {
+      // Main balance
+      document.getElementById("main_balance").innerText =
+        mainBalance + donatedBalanceQuota;
+
+      // section balance
+      document.getElementById("quota_section_total_balance").innerText =
+        TotalBalanceQuota + donatedBalanceQuota;
+
+      // Show amount on modal
+      document.getElementById("quota_movement_payment_successfull").innerText =
+        donatedBalanceQuota;
+
+      // Showing the data on history
+      // Transaction History
+      transactionHistory(donatedBalanceQuota, "Injured in the Quota Movement");
+
+      // showing Modal
+      document.getElementById("my_modal_3").showModal();
+    } else {
+      alert(`We're Sorry!
+Your donation could not be processed.`);
+    }
+
+    // Clear input field in feni section
+    clearValue("quota_movement_input");
+  });
