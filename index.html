@@ -179,7 +179,7 @@
             >
               <img src="assets/coin.png" alt="" />
               <h3 class="text-[#545454] font-bold text-lg">
-                <span>600</span> BDT
+                <span id="total_amount_feni">600</span> BDT
               </h3>
             </div>
             <h2 class="text-2xl font-bold mt-4">
@@ -197,13 +197,14 @@
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered w-full"
+              id="donated_blance_input"
             />
             <!-- Modal Button -->
             <!-- Open the modal using ID.showModal() method -->
             <button
-              onclick="my_modal_2.showModal()"
               href=""
               class="bg-[#B4F461] text-lg font-bold px-8 py-3 rounded-md w-full mt-7"
+              id="feni_donate_now_button"
             >
               Donate Now
             </button>
@@ -213,7 +214,12 @@
                 <h3 class="text-3xl text-center font-bold">Congrates!</h3>
                 <img class="mx-auto mt-4 mb-5" src="assets/coin.png" alt="" />
                 <p class="py-2 text-center text-gray-500 font-semibold">
-                  You Have Donated For Humankind
+                  You have successfully donated
+                  <span
+                    class="font-bold text-green-400"
+                    id="feni_payment_successfull"
+                  ></span>
+                  BDT
                 </p>
                 <h4 class="font-bold text-xl text-center">Seccessfully</h4>
                 <div class="modal-action">

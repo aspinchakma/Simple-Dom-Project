@@ -48,14 +48,24 @@ document
     const mainBalance = getInnerText("main_balance");
     const donatedBalanceNoakhali = getInputValue("donated_input_noakhali");
     const TotalBalanceNoakhali = getInnerText("Total_amount_noakhali");
-    if (donatedBalanceNoakhali >= 0 && !isNaN(donatedBalanceNoakhali)) {
+
+    // checking
+    if (donatedBalanceNoakhali > 0 && !isNaN(donatedBalanceNoakhali)) {
+      // total Balance
       const totalBalance = mainBalance + donatedBalanceNoakhali;
+
+      // set the total balance on main blance
       document.getElementById("main_balance").innerText = totalBalance;
+
+      // paymenst successfull message on modal
       document.getElementById("noakhali_payment_successfull").innerText =
         donatedBalanceNoakhali;
+
+      // total maount in section
       document.getElementById("Total_amount_noakhali").innerText =
         TotalBalanceNoakhali + donatedBalanceNoakhali;
 
+      // adding transaction history
       transactionHistory(
         donatedBalanceNoakhali,
         "Flood at Noakhali, Bangladesh"
@@ -63,13 +73,48 @@ document
 
       // Modal Opening
       document.getElementById("my_modal_1").showModal();
-
-      // clear input Field
-      clearValue("donated_input_noakhali");
     } else {
-      // clear input Field
-      clearValue("donated_input_noakhali");
       alert(`We're Sorry!
 Your donation could not be processed.`);
     }
+
+    // clear input Field
+    clearValue("donated_input_noakhali");
+  });
+
+// Feni section
+
+document
+  .getElementById("feni_donate_now_button")
+  .addEventListener("click", function () {
+    const mainBalance = getInnerText("main_balance");
+    const donatedBalanceFeni = getInputValue("donated_blance_input");
+    const TotalBalanceFeni = getInnerText("total_amount_feni");
+
+    // requirement
+    if (donatedBalanceFeni > 0 && !isNaN(donatedBalanceFeni)) {
+      // Main balance
+      document.getElementById("main_balance").innerText =
+        mainBalance + donatedBalanceFeni;
+
+      // set on total amount feni section
+      document.getElementById("total_amount_feni").innerText =
+        TotalBalanceFeni + donatedBalanceFeni;
+
+      // show amout on modal
+      document.getElementById("feni_payment_successfull").innerText =
+        donatedBalanceFeni;
+
+      // Transaction History
+      transactionHistory(donatedBalanceFeni, "Flood Relief in Feni,Bangladesh");
+
+      // opening modal
+      document.getElementById("my_modal_2").showModal();
+    } else {
+      alert(`We're Sorry!
+Your donation could not be processed.`);
+    }
+
+    // Clear input field in feni section
+    clearValue("donated_blance_input");
   });
